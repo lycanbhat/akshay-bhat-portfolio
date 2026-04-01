@@ -2,13 +2,14 @@ export const personal = {
   name: "Akshay Bhat",
   firstName: "Akshay",
   lastName: "Bhat",
-  title: "Senior Product Designer",
+  title: "Product Designer & Technology Leader",
   roles: [
-    "Interaction Designer",
-    "Visual Systems Expert",
-    "Design Systems Lead",
+    "Product Designer",
     "Technology Leader",
+    "Full-stack Builder",
+    "Design Systems Lead",
     "UX Strategist",
+    "Product Engineer",
   ],
   email: "akshay.bhat93@gmail.com",
   phone: "+91-7259356200",
@@ -16,9 +17,9 @@ export const personal = {
   linkedin: "https://linkedin.com/in/akshaybhat93",
   yearsExp: "11+",
   projectsCount: "20+",
-  companiesCount: "6",
+  companiesCount: "5",
   summary:
-    "Senior Product Designer and technology leader with 11+ years of experience designing intuitive, user-centered digital products across mobile (iOS & Android), web, and tablet platforms. Proven track record of owning design projects end-to-end — from early ideation through launch and iteration — for consumer applications with real-world scale. Passionate about making complex systems feel simple and sweating the details that matter.",
+    "Product Designer and Technology Leader with 11+ years of experience who both designs and builds. I've led end-to-end product work across mobile (iOS & Android), web, automotive HMI, and enterprise SaaS — from early concept through final code. Currently Head of Technology at Spatium Offices, where I own the full product lifecycle: UX strategy, visual design, frontend, and backend. I don't hand off to engineering — I am engineering.",
 };
 
 export const skills = {
@@ -31,20 +32,31 @@ export const skills = {
     "Wireframing",
     "Prototyping",
     "Information Architecture",
-    "Accessibility",
+    "Automotive HMI",
   ],
-  Platforms: ["iOS", "Android", "Web", "Tablet", "Cross-platform"],
+  Engineering: [
+    "React",
+    "Node.js",
+    "JavaScript",
+    "HTML & CSS",
+    "REST APIs",
+    "MySQL",
+    "PostgreSQL",
+    "Full-stack Development",
+  ],
+  Platforms: ["iOS", "Android", "Web", "Tablet", "Automotive", "SaaS"],
   Methodologies: [
     "User-Centered Design",
     "Agile UX",
     "Design Thinking",
     "Usability Testing",
-    "Iterative Design",
+    "0-to-1 Product",
+    "Multi-tenant Architecture",
   ],
   Leadership: [
-    "End-to-end Ownership",
+    "End-to-end Product Ownership",
+    "Technology Strategy",
     "Cross-functional Collaboration",
-    "Design Critique",
     "Stakeholder Communication",
     "Team Mentoring",
   ],
@@ -131,6 +143,59 @@ export const experience = [
       "Progressed from Web Developer to UI & UX Lead over 4+ years, building dual foundations in frontend and UX",
       "Designed and developed user interfaces for multiple client projects across platforms",
     ],
+  },
+];
+
+export const liveProducts = [
+  {
+    name: "Pralapin",
+    tagline: "End-to-end web platform — designed, built, and shipped",
+    description:
+      "A full-stack web application built from the ground up. Handled the complete product lifecycle — from UI/UX design through frontend and backend development — resulting in a live, production-grade platform.",
+    url: "https://app.pralapin.com/login",
+    org: "Pralapin",
+    tags: ["Full-stack", "Web App", "React", "Node.js"],
+    stack: ["React", "Node.js", "REST API", "PostgreSQL"],
+  },
+  {
+    name: "Pralapin Montessori",
+    tagline: "School website for Pralapin Montessori",
+    description:
+      "Designed and developed the public-facing website for Pralapin Montessori — covering the school's programmes, philosophy, admissions, and contact information. Built for clarity and warmth to speak to parents researching early childhood education.",
+    url: "https://pralapin.com/",
+    org: "Pralapin",
+    tags: ["Website", "Education", "Frontend"],
+    stack: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    name: "Ledgerly",
+    tagline: "Finance & ledger management for Spatium360",
+    description:
+      "A financial ledger and accounts management tool built for Spatium Offices. Handles transaction records, balance tracking, and reporting — replacing manual spreadsheet workflows with a structured, role-based web application.",
+    url: "https://ledgerly.spatium360.com/",
+    org: "Spatium offices",
+    tags: ["Full-stack", "Finance", "Web App"],
+    stack: ["React", "Node.js", "REST API", "MySQL"],
+  },
+  {
+    name: "Tomato Café",
+    tagline: "Café ordering & operations system for Spatium Offices",
+    description:
+      "An internal café management platform for Spatium Offices — enabling staff to manage menus, take orders, and track fulfilment. Designed for speed of use at a café counter with a touch-friendly interface.",
+    url: "https://cafe.spatiumoffices.com/login",
+    org: "Spatium Offices",
+    tags: ["Full-stack", "Operations", "Web App"],
+    stack: ["React", "Node.js", "REST API"],
+  },
+  {
+    name: "Pagahr",
+    tagline: "Human resources management platform for Spatium Offices",
+    description:
+      "A custom HR management system built for Spatium Offices — covering employee records, attendance, leave management, and organisational structure. Built in-house to fit the specific workflows of a growing managed workspace operator.",
+    url: "https://hr.spatiumoffices.com/",
+    org: "Spatium Offices",
+    tags: ["Full-stack", "HR Tech", "Web App"],
+    stack: ["React", "Node.js", "REST API", "MySQL"],
   },
 ];
 

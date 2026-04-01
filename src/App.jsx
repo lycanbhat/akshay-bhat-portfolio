@@ -8,6 +8,7 @@ import CaseStudies from "./components/CaseStudies";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
+import LiveProducts from "./components/LiveProducts";
 
 function WhatsAppFAB() {
   const [hovered, setHovered] = useState(false);
@@ -67,6 +68,7 @@ export default function App() {
         <About />
         <Skills />
         <CaseStudies />
+        <LiveProducts />
         <Experience />
         <Contact />
       </main>

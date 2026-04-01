@@ -136,7 +136,7 @@ export default function Hero() {
               fontWeight: 500,
             }}
           >
-            Senior Product Designer · {personal.yearsExp} Years · {personal.location}
+            Product Designer & Technology Leader · {personal.yearsExp} Years · {personal.location}
           </span>
         </motion.div>
 

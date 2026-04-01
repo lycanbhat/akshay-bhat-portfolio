@@ -7,7 +7,7 @@ const stats = [
   { value: personal.yearsExp, label: "Years of Experience" },
   { value: personal.projectsCount, label: "Products Shipped" },
   { value: personal.companiesCount, label: "Companies" },
-  { value: "3", label: "Platforms" },
+  { value: "6+", label: "Live Apps Built" },
 ];
 
 export default function About() {
@@ -102,7 +102,7 @@ export default function About() {
                 gap: 8,
               }}
             >
-              {["Figma", "Interaction Design", "Design Systems", "iOS", "Android", "Web", "UX Research"].map((tag) => (
+              {["Figma", "React", "Node.js", "Design Systems", "iOS", "Android", "Web", "Automotive HMI", "SaaS"].map((tag) => (
                 <span
                   key={tag}
                   style={{
@@ -139,9 +139,9 @@ export default function About() {
               marginBottom: 32,
             }}
           >
-            Making complex systems
+            I design it.
             <br />
-            <span style={{ color: "rgba(255,255,255,0.45)" }}>feel simple.</span>
+            <span style={{ color: "rgba(255,255,255,0.45)" }}>Then I build it.</span>
           </motion.h2>
 
           <motion.p
@@ -171,8 +171,8 @@ export default function About() {
             }}
           >
             {[
-              { label: "Specialization", value: "Product Design" },
-              { label: "Focus", value: "Mobile & Web" },
+              { label: "Specialization", value: "Design & Engineering" },
+              { label: "Focus", value: "Mobile, Web & SaaS" },
               { label: "Based in", value: personal.location },
               { label: "Availability", value: "Open to Roles" },
             ].map((item) => (

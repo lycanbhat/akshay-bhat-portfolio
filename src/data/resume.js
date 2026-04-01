@@ -304,6 +304,61 @@ export const caseStudies = [
     },
   },
   {
+    id: "08",
+    name: "HirePro Design System",
+    company: "HirePro Consulting",
+    type: "Style Guide & Component Library",
+    platforms: ["Web"],
+    tags: ["Design System", "Style Guide", "Components"],
+    description:
+      "End-to-end design system and style guide covering color tokens, typography, and a full component library used across HirePro's enterprise HR product suite.",
+    highlight: "Design System",
+    hasDetailedStudy: true,
+    detailedStudy: {
+      name: "HirePro Design System & Style Guide",
+      description:
+        "A comprehensive design system and style guide built for HirePro's suite of enterprise HR products — covering color tokens, typography scale, and a full component library (buttons, cards, inputs, modals, avatars, badges, and more) used across the video interview platform, assessment engine, and candidate management tools serving Fortune 500 clients including Accenture and Amazon.",
+      platforms: ["Web", "Tablet"],
+      tags: ["Design System", "Style Guide", "Component Library", "Enterprise HR"],
+      meta: [
+        { label: "Company", value: "HirePro Consulting" },
+        { label: "Role", value: "Design Lead" },
+        { label: "Timeline", value: "2019 – 2020" },
+        { label: "Platform", value: "Web" },
+        { label: "Scope", value: "Full Design System" },
+        { label: "Clients", value: "Accenture, Amazon" },
+      ],
+      sections: [
+        {
+          title: "Why a Design System",
+          content:
+            "HirePro's product suite had grown rapidly across multiple engineering teams — each shipping slightly different button styles, inconsistent spacing, and divergent colour usage. This style guide became the single source of truth for all design and engineering work, cutting handoff friction and ensuring every product surface felt like one coherent platform.",
+        },
+        {
+          title: "What's Covered",
+          bullets: [
+            "Typography — Open Sans across 5 weights (Light to Extra-Bold) with defined title and body colour tokens.",
+            "Color system — Primary, semantic (success/warning/error), neutral, and tint palettes with hex values and usage rules.",
+            "Buttons — 7 variants: Primary, Default, Ghost, Link, Warning, Delete, Disabled — plus Button Group.",
+            "Form controls — Input fields (default, labelled, focus, error), Textarea, Checkbox, Radio Group, Toggle, Datepicker.",
+            "Feedback & status — Badges (6 types), Banners (error/warning/success), Snackbars (4 types).",
+            "Navigation & layout — Tabs (default/dropdown/icon), Breadcrumbs, Pagination, Dropdown menus (4 trigger types).",
+            "Overlay — Modal dialog, Tooltips (4 directions), Spinners (small/large/overlay).",
+            "Data display — Cards/Panels (4 variants), Avatars (6 sizes with default fallback), Iconography via Font Awesome.",
+          ],
+        },
+      ],
+      screens: [
+        {
+          src: "/case-studies/hirepro-styleguide/screen-1.png",
+          caption: "HirePro Style Guide — Complete design system covering typography, color palette, and full component library",
+        },
+      ],
+      outcome:
+        "The style guide brought consistency to a product suite that had fragmented across multiple engineering teams. With a shared token layer, component library, and documented usage guidelines, developer-designer handoff became a single reference document rather than a back-and-forth annotation cycle. The system was actively used across the video interview, assessment, and candidate management platforms.",
+    },
+  },
+  {
     id: "03",
     name: "Invasystems IoT Symphony",
     company: "Freelance — Invasystems",

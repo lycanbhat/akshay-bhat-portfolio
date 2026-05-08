@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -9,6 +10,17 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 import LiveProducts from "./components/LiveProducts";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function WhatsAppFAB() {
   const [hovered, setHovered] = useState(false);
@@ -58,10 +70,9 @@ function WhatsAppFAB() {
   );
 }
 
-export default function App() {
+function HomePage() {
   return (
     <>
-      <Cursor />
       <Navbar />
       <main>
         <Hero />
@@ -73,7 +84,22 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppFAB />
     </>
   );
 }
+
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <Cursor />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+      <WhatsAppFAB />
+    </Router>
+  );
+}
+
+

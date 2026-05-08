@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { personal } from "../data/resume";
 
 export default function Footer() {
@@ -26,7 +27,7 @@ export default function Footer() {
         © {new Date().getFullYear()} {personal.name} · {personal.location}
       </div>
 
-      <div style={{ display: "flex", gap: 24 }}>
+      <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
         {[
           { label: "Email", href: `mailto:${personal.email}` },
           { label: "LinkedIn", href: personal.linkedin },
@@ -50,6 +51,21 @@ export default function Footer() {
             {link.label}
           </a>
         ))}
+        <Link
+          to="/privacy"
+          style={{
+            fontSize: 12,
+            letterSpacing: "0.1em",
+            textTransform: "uppercase",
+            color: "rgba(255,255,255,0.25)",
+            transition: "color 0.2s ease",
+            fontWeight: 500,
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.25)")}
+        >
+          Privacy
+        </Link>
       </div>
 
       <style>{`
@@ -60,3 +76,4 @@ export default function Footer() {
     </footer>
   );
 }
+

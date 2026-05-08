@@ -1,7 +1,5 @@
-import React from "react";
+import { Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import { Shield, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
@@ -18,20 +16,6 @@ const PrivacyPolicy = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         style={{ maxWidth: "800px", margin: "0 auto" }}
       >
-        <Link to="/" style={{ 
-          display: "flex", 
-          alignItems: "center", 
-          gap: "8px", 
-          color: "var(--white-60)", 
-          marginBottom: "40px",
-          fontSize: "14px",
-          transition: "color 0.2s ease"
-        }}
-        onMouseEnter={(e) => e.currentTarget.style.color = "var(--white)"}
-        onMouseLeave={(e) => e.currentTarget.style.color = "var(--white-60)"}
-        >
-          <ArrowLeft size={16} /> Back to Portfolio
-        </Link>
 
         <header style={{ marginBottom: "60px" }}>
           <div style={{ 

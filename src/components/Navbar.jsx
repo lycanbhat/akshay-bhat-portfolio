@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Work", href: "/#work" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Contact", href: "/#contact" },
+  { label: "Privacy", href: "/privacy", target: "_blank" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -51,29 +55,50 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <a href="#top" onClick={closeMenu} style={{ display: "flex", alignItems: "center" }}>
+        <Link to="/" onClick={() => { window.scrollTo(0, 0); closeMenu(); }} style={{ display: "flex", alignItems: "center" }}>
           <img src="/logo.svg" alt="Akshay Bhat" style={{ height: 28, width: "auto" }} />
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="nav-links" style={{ display: "flex", listStyle: "none", gap: 40 }}>
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                style={{
-                  fontSize: 13,
-                  fontWeight: 400,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.55)",
-                  transition: "color 0.2s ease",
-                }}
-                onMouseEnter={(e) => (e.target.style.color = "white")}
-                onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.55)")}
-              >
-                {link.label}
-              </a>
+              {link.href.startsWith("/#") ? (
+                <a
+                  href={link.href}
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 400,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.55)",
+                    transition: "color 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "white")}
+                  onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.55)")}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  to={link.href}
+                  target={link.target}
+                  rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 400,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.55)",
+                    transition: "color 0.2s ease",
+                    textDecoration: "none"
+                  }}
+                  onMouseEnter={(e) => (e.target.style.color = "white")}
+                  onMouseLeave={(e) => (e.target.style.color = "rgba(255,255,255,0.55)")}
+                >
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -175,29 +200,58 @@ export default function Navbar() {
             }}
           >
             {navLinks.map((link, i) => (
-              <motion.a
+              <motion.div
                 key={link.href}
-                href={link.href}
-                onClick={closeMenu}
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.06, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                style={{
-                  fontSize: 22,
-                  fontWeight: 500,
-                  letterSpacing: "-0.02em",
-                  color: "rgba(255,255,255,0.7)",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(255,255,255,0.06)",
-                  display: "block",
-                  fontFamily: "var(--font-display)",
-                  transition: "color 0.2s ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "white")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
               >
-                {link.label}
-              </motion.a>
+                {link.href.startsWith("/#") ? (
+                  <a
+                    href={link.href}
+                    onClick={closeMenu}
+                    style={{
+                      fontSize: 22,
+                      fontWeight: 500,
+                      letterSpacing: "-0.02em",
+                      color: "rgba(255,255,255,0.7)",
+                      padding: "14px 0",
+                      borderBottom: "1px solid rgba(255,255,255,0.06)",
+                      display: "block",
+                      fontFamily: "var(--font-display)",
+                      transition: "color 0.2s ease",
+                      textDecoration: "none"
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "white")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.href}
+                    onClick={closeMenu}
+                    target={link.target}
+                    rel={link.target === "_blank" ? "noopener noreferrer" : undefined}
+                    style={{
+                      fontSize: 22,
+                      fontWeight: 500,
+                      letterSpacing: "-0.02em",
+                      color: "rgba(255,255,255,0.7)",
+                      padding: "14px 0",
+                      borderBottom: "1px solid rgba(255,255,255,0.06)",
+                      display: "block",
+                      fontFamily: "var(--font-display)",
+                      transition: "color 0.2s ease",
+                      textDecoration: "none"
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "white")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.7)")}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </motion.div>
             ))}
             <motion.a
               href="mailto:akshay.bhat93@gmail.com"

@@ -53,6 +53,8 @@ export default function Footer() {
         ))}
         <Link
           to="/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             fontSize: 12,
             letterSpacing: "0.1em",

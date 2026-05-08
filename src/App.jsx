@@ -72,18 +72,33 @@ function WhatsAppFAB() {
 
 function HomePage() {
   return (
+    <main>
+      <Hero />
+      <About />
+      <Skills />
+      <CaseStudies />
+      <LiveProducts />
+      <Experience />
+      <Contact />
+    </main>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const isPrivacyPage = location.pathname === "/privacy";
+
+  return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <CaseStudies />
-        <LiveProducts />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
+      <ScrollToTop />
+      <Cursor />
+      {!isPrivacyPage && <Navbar />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+      {!isPrivacyPage && <Footer />}
+      {!isPrivacyPage && <WhatsAppFAB />}
     </>
   );
 }
@@ -91,13 +106,7 @@ function HomePage() {
 export default function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <Cursor />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-      </Routes>
-      <WhatsAppFAB />
+      <AppContent />
     </Router>
   );
 }

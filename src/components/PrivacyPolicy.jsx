@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
             Privacy Policy
           </h1>
           <p style={{ color: "var(--white-60)", fontSize: "16px" }}>
-            Last Updated: May 8, 2026
+            Last Updated: June 3, 2026
           </p>
         </header>
 
@@ -56,7 +56,10 @@ const PrivacyPolicy = () => {
           <section>
             <h2 style={{ color: "var(--white)", marginBottom: "16px", fontFamily: "var(--font-display)" }}>1. Introduction</h2>
             <p>
-              I am dedicated to protecting your privacy. This Privacy Policy explains how I collect, use, and disclose information when you use my mobile games and applications (the "Service"). By using the Service, you agree to the collection and use of information in accordance with this policy.
+              This Privacy Policy describes how <strong>Akshay Bhat</strong> ("I", "me", "my", or the "Developer") collects, uses, and discloses information when you use the mobile application <strong>Retro Flick</strong> and any other mobile games or applications provided by the Developer (collectively, the "Service").
+            </p>
+            <p style={{ marginTop: "12px" }}>
+              I am dedicated to protecting your privacy. By using the Service, you agree to the collection and use of information in accordance with this policy.
             </p>
           </section>
 
@@ -115,7 +118,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 style={{ color: "var(--white)", marginBottom: "16px", fontFamily: "var(--font-display)" }}>7. Changes to This Privacy Policy</h2>
             <p>
-              I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+              I may update my Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
             </p>
           </section>
 

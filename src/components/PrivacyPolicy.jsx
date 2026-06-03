@@ -56,7 +56,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 style={{ color: "var(--white)", marginBottom: "16px", fontFamily: "var(--font-display)" }}>1. Introduction</h2>
             <p>
-              This Privacy Policy describes how <strong>Akshay Bhat</strong> ("I", "me", "my", or the "Developer") collects, uses, and discloses information when you use the mobile application <strong>Retro Flick</strong> and any other mobile games or applications provided by the Developer (collectively, the "Service").
+              This Privacy Policy describes how <strong>Lycanbhat Studio</strong> (also operated by <strong>Akshay Bhat</strong>, collectively referred to as "I", "me", "my", the "Developer", or the "Company") collects, uses, and discloses information when you use the mobile application <strong>Retro Flick</strong> and any other mobile games or applications provided by the Developer (collectively, the "Service").
             </p>
             <p style={{ marginTop: "12px" }}>
               I am dedicated to protecting your privacy. By using the Service, you agree to the collection and use of information in accordance with this policy.
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 style={{ color: "var(--white)", marginBottom: "16px", fontFamily: "var(--font-display)" }}>8. Contact Information</h2>
             <p>
-              If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me.
+              If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at <strong>Lycanbhat Studio</strong> / <strong>Akshay Bhat</strong>.
             </p>
             <p style={{ marginTop: "16px", color: "var(--white)" }}>
               Email: akshay.bhat93@gmail.com
